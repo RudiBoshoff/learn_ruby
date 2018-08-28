@@ -1,1 +1,8 @@
-#write your code here
+# Rudi Boshoff
+def hello
+  'Hello!'
+end
+
+def greet(who)
+  "Hello, #{who}!"
+end
