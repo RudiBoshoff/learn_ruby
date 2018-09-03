@@ -41,14 +41,10 @@ end
 def titleize(title)
   message = title.split.map(&:capitalize).join(' ')
   # caplitalizes each word after a " "
-  sentence = message.tr('And', 'and')
-  sentence = sentence.tr('The', 'the')
-  sentence = sentence.tr('Over', 'over')
-  sentence = sentence.tr('An', 'an')
+  sentence = message.tr('And', 'and').tr('The', 'the').tr('Over', 'over').tr('An', 'an')
   # replaces caplitalized small words
   if sentence[0..3] == 'the '
     sentence = sentence.sub('the ', 'The ')
   end
-
   sentence
 end

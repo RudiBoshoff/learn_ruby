@@ -30,6 +30,11 @@ describe "#translate" do
     s = translate("banana")
     expect(s).to eq("ananabay")
   end
+  
+  it "counts 'qu' as a single phoneme" do
+    s = translate("quiet")
+    expect(s).to eq("ietquay")
+  end
 
   it "translates a word beginning with two consonants" do
     s = translate("cherry")
@@ -48,11 +53,6 @@ describe "#translate" do
   it "counts 'sch' as a single phoneme" do
     s = translate("school")
     expect(s).to eq("oolschay")
-  end
-
-  it "counts 'qu' as a single phoneme" do
-    s = translate("quiet")
-    expect(s).to eq("ietquay")
   end
 
   it "counts 'qu' as a consonant even when it's preceded by a consonant" do
